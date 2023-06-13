@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { AboutMeWrapper, MainTextBox, AboutMeBox, SpecjalizationTextBox, MainContainer, PhotoBox, RightSideContainer, LeftSideContainer, Line, AboutMeText, ImageArrow, ImageArrowText, ImageArrowBox } from './AboutMe.styles'
 import img from  "../../../../img/CVimage.png"
 import arrowRight from "../../../../img/arrowRight.png"
@@ -9,6 +9,8 @@ export const AboutMe = () => {
   const text2 = "Alumnus of Politechnika Bydgoska"
 
   const describe = "I am a graduate of Applied Computer Science from Politechnika Bydgoska (Bydgoszcz University of Technology), with a strong passion for computers."
+
+  const [isTest, setIsTest] = useState(false);
 
   return (
     <AboutMeWrapper>
