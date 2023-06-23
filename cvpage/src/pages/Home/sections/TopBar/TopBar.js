@@ -1,25 +1,58 @@
-import React from 'react'
-import { NavigationButton, TopBarWrapper } from './TopBar.styles'
+import { useState, useEffect} from 'react';
+
+import { NavigationButton, TopBarWrapper, SlideOutTopBarButton} from './TopBar.styles'
 
 export const TopBar = () => {
 
-  const handleScroll = (value) => {
-    // Obliczenie wartości przewijania na podstawie wartości typu vh
-    const scrollPosition = value * window.innerHeight;
+  useEffect(() => {
+    window.scrollTo(0, 0);
+    const handleScroll = () => {
+      setHidden(window.scrollY > 0);
+    };
 
-    // Przewinięcie strony do określonej pozycji
-    window.scrollTo({
-      top: scrollPosition,
-      behavior: 'smooth',
-    });
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
+  const [hidden, setHidden] = useState(false);
+
+  const handleScroll = (value) => {
+    const sections = document.querySelectorAll('.section');
+    console.log('sections:', sections);
+  
+    if (sections.length > value) {
+      const scrollPosition = sections[value].offsetTop;
+      console.log('scrollPosition:', scrollPosition);
+  
+      window.scrollTo({
+        top: scrollPosition,
+        behavior: 'smooth',
+      });
+    } else {
+      console.log('Invalid value:', value);
+    }
+  };
+
+  const handleMouseEnter = () => {
+    setHidden(false);
+  };
+
+  const handleMouseLeave = () => {
+    setHidden(true);
   };
 
   return (
-    <TopBarWrapper>
-        <NavigationButton onClick={() => handleScroll(0)}>About me</NavigationButton>
-        <NavigationButton onClick={() => handleScroll(1)}>Skills & Experience</NavigationButton>
-        <NavigationButton onClick={() => handleScroll(2)}>Projects</NavigationButton>
-        <NavigationButton onClick={() => handleScroll(3)}>Contact</NavigationButton>
-    </TopBarWrapper>
+    <div>
+        {hidden ? <div><SlideOutTopBarButton onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}/></div> : (
+        <TopBarWrapper>
+        <NavigationButton onClick={() => handleScroll(1)}>About me</NavigationButton>
+        <NavigationButton onClick={() => handleScroll(2)}>Skills</NavigationButton>
+        <NavigationButton onClick={() => handleScroll(3)}>Projects</NavigationButton>
+        <NavigationButton onClick={() => handleScroll(4)}>Contact</NavigationButton>
+        </TopBarWrapper>
+      )}
+    </div>
   )
 }

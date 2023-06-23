@@ -3,6 +3,8 @@ import { ContactWrapper } from './Contact.styles'
 
 export const Contact = () => {
   return (
-    <ContactWrapper></ContactWrapper>
+    <ContactWrapper className="section">
+      CONTACT
+    </ContactWrapper>
   )
 }
