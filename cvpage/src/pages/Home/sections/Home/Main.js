@@ -1,9 +1,10 @@
 import React, { useEffect, useState, useContext } from 'react'
-import { AboutMeWrapper, Name, MainTextBox, AboutMeBox, SpecjalizationTextBox, MainContainer, PhotoBox, RightSideContainer, LeftSideContainer, Line, AboutMeText, ImageArrow, ImageArrowText, ImageArrowBox, PhotoContainer, BackgroundImage, TriangleBackground, TextContainer, HiText, TextBox, Surname, Specjalization, SpecjalizationEnding, SpecjalizationBox, NameBox } from './Main.styles'
+import { AboutMeWrapper, Name, MainTextBox, AboutMeBox, SpecjalizationTextBox, MainContainer, PhotoBox, RightSideContainer, LeftSideContainer, Line, AboutMeText, ImageArrow, ImageArrowText, ImageArrowBox, PhotoContainer, BackgroundImage, TriangleBackground, TextContainer, HiText, TextBox, Surname, Specjalization, SpecjalizationEnding, SpecjalizationBox, NameBox, Photo } from './Main.styles'
 import img from  "../../../../img/CVimage.png"
-import arrowRight from "../../../../img/arrowRight.png"
+import JS from "../../../../img/JS.png";
 import { ModalContext } from '../../../../context/ModalProvider'
-
+// import Man from "../../../../img/Man"
+import man from "../../../../img/man.png"
 export const Main = () => {
 
   const [isChanged, setIsChanged] = useState(false);
@@ -36,6 +37,7 @@ export const Main = () => {
   return (
     <AboutMeWrapper className="section">
       <TriangleBackground/>
+      <Photo src={man}/>
       <TextContainer>
         <HiText>Hi, I am</HiText>
         <NameBox>

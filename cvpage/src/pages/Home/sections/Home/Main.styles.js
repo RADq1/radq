@@ -4,7 +4,7 @@ import { MEDIA_QUERIES } from "../../../../constants/mediaQueries";
 export const AboutMeWrapper = styled.div`
     display: flex;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 92vh;
     /* max-height: 100vh; */
     padding: 16px 16px 32px 16px;
     padding: 64px;
@@ -184,40 +184,38 @@ export const PhotoBox = styled.img`
     }
 `
 
+export const Photo = styled.img`
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    /* width: 200px;
+    height: 200px; */
+    z-index: 100;
+`
+
 export const TriangleBackground = styled.div`
     position: absolute;
     transform: translate(-50%,-50%);
     height: 50%;
-    left: 1780px;
     border-left: 1500px solid transparent;
     border-right: 1500px solid transparent;
     border-bottom: 3000px solid #FF8A00;
 
-    /* ${MEDIA_QUERIES.sm} {
-        top: -500px;
-        left: -100px;
-        border-left: 1000px solid transparent;
-        border-right: 1000px solid transparent;
-        border-bottom: 2000px solid #FF8A00;
+    ${MEDIA_QUERIES.sm} {
+        left: 1080px;
     }
 
     ${MEDIA_QUERIES.lg} {
-        top: -10%;
-        left: -200px;
-        left: 100%;
-        border-left: 1600px solid transparent;
-        border-right: 1600px solid transparent;
-        border-bottom: 2000px solid #FF8A00;
+        left: 1000px;
+    }
+
+    ${MEDIA_QUERIES.xl} {
+        left: 1150px;
     }
 
     ${MEDIA_QUERIES.xxl} {
-        top: -10%;
-        left: -200px;
-        left: 100%;
-        border-left: 1600px solid transparent;
-        border-right: 1600px solid transparent;
-        border-bottom: 2000px solid #FF8A00;
-    } */
+        left: 1780px;
+    }
 `
 
 export const TextContainer = styled.div`
@@ -269,6 +267,7 @@ export const NameBox = styled.div`
 export const SpecjalizationBox = styled.div`
     display: flex;
     gap: 0px;
+    margin-left: 15px;
     align-items: center;
     justify-content: center;
 `
