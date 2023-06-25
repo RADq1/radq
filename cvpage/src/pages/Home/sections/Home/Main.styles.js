@@ -227,8 +227,21 @@ export const TextContainer = styled.div`
     /* transform: translate(-50%,-50%); */
     /* top: 40%;
     left: 38%; */
-    top: 500px;
-    left: 555px;
+
+    ${MEDIA_QUERIES.xxl} {
+        top: 420px;
+        left: 540px;
+    }
+
+    ${MEDIA_QUERIES.xxlp} {
+        top: 420px;
+        left: 550px;
+    }
+
+    ${MEDIA_QUERIES.xxlpp} {
+        top: 500px;
+        left: 555px;
+    }
 `
 
 export const HiText = styled.span`
@@ -248,7 +261,7 @@ export const Surname = styled(Name)`
 `
 
 export const Specjalization = styled.span`
-    line-height: 1.4;
+    /* line-height: 1.4; */
     letter-spacing: 15px;
     font-size: 36px;
     font-weight: 700;

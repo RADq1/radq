@@ -37,7 +37,7 @@ export const Main = () => {
   return (
     <AboutMeWrapper className="section">
       <TriangleBackground/>
-      <Photo src={man}/>
+      {/* <Photo src={man}/> */}
       <TextContainer>
         <HiText>Hi, I am</HiText>
         <NameBox>

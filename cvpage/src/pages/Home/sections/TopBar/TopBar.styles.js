@@ -11,7 +11,7 @@ export const TopBarWrapper = styled.div`
     background-color: transparent;
     z-index: 100;
     top: 50px;
-    left: 70%;
+    left: 80%;
     transform: translate(-50%, -50%);
     display: none;
     /* opacity: ${props => (props.hidden ? '0' : '1')}; */
@@ -25,6 +25,14 @@ export const TopBarWrapper = styled.div`
 
     ${MEDIA_QUERIES.md} {
         display: flex;
+    }
+
+    ${MEDIA_QUERIES.xxlp} {
+        left: 80%;
+    }
+
+    ${MEDIA_QUERIES.xxlpp} {
+        left: 70%;
     }
 `;
 
