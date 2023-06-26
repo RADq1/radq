@@ -228,13 +228,18 @@ export const TextContainer = styled.div`
     /* top: 40%;
     left: 38%; */
 
+    ${MEDIA_QUERIES.xl} {
+        top: 200px;
+        left: 0;
+    }
+
     ${MEDIA_QUERIES.xxl} {
         top: 420px;
         left: 540px;
     }
 
     ${MEDIA_QUERIES.xxlp} {
-        top: 420px;
+        top: 430px;
         left: 550px;
     }
 

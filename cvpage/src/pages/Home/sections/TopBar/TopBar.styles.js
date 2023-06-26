@@ -27,6 +27,11 @@ export const TopBarWrapper = styled.div`
         display: flex;
     }
 
+    
+    ${MEDIA_QUERIES.xl} {
+        left: 70%;
+    }
+
     ${MEDIA_QUERIES.xxlp} {
         left: 80%;
     }
