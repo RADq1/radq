@@ -8,7 +8,7 @@ const MEDIA_QUERIES = {
     xl: '@media screen and (min-width: 1200px)',
     xxl: '@media screen and (min-width: 1520px)',
     xxlp: '@media screen and (min-width: 1920px)',
-    xxlpp: '@media screen and (min-width: 2560px)',
+    xxlpp: '@media screen and (min-width: 2500px)',
   };
 
   export { MEDIA_QUERIES };

@@ -11,7 +11,7 @@ export const TopBarWrapper = styled.div`
     background-color: transparent;
     z-index: 100;
     top: 50px;
-    left: 80%;
+    left: 68%;
     transform: translate(-50%, -50%);
     display: none;
     /* opacity: ${props => (props.hidden ? '0' : '1')}; */
@@ -27,17 +27,16 @@ export const TopBarWrapper = styled.div`
         display: flex;
     }
 
-    
-    ${MEDIA_QUERIES.xl} {
-        left: 70%;
+    ${MEDIA_QUERIES.xxl} {
+        left: 68%;
     }
 
     ${MEDIA_QUERIES.xxlp} {
-        left: 80%;
+        left: 68%;
     }
 
     ${MEDIA_QUERIES.xxlpp} {
-        left: 70%;
+        left: 68%;
     }
 `;
 
@@ -46,16 +45,15 @@ export const NavigationButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 140px;
-    min-height: 50px;
+    min-width: 100px;
+    min-height: 30px;
     font-family: 'Montserrat', sans-serif;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 700;
     cursor: pointer;
-    margin: 16px;
+    margin: 8px;
     transition: 0.3s;
     border-radius: 30px;
-
     color: white;
 
     &:hover {
@@ -63,7 +61,12 @@ export const NavigationButton = styled.div`
         color: black;
     }
 
-    ${MEDIA_QUERIES.lg}
+    ${MEDIA_QUERIES.xxl} {
+        min-width: 140px;
+        min-height: 50px;
+        font-size: 16px;
+    }
+
 `
 
 export const SlideOutTopBarButton = styled.div`

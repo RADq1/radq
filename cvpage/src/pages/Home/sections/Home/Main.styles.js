@@ -1,15 +1,26 @@
 import { styled } from "styled-components";
 import { MEDIA_QUERIES } from "../../../../constants/mediaQueries";
+import themeImg from "../../../../img/Theme.png";
 
 export const AboutMeWrapper = styled.div`
     display: flex;
     justify-content: center;
-    min-height: 92vh;
+    width: 100%;
+    /* min-height: 100vh; */
     /* max-height: 100vh; */
-    padding: 16px 16px 32px 16px;
-    padding: 64px;
+    /* padding: 16px 16px 32px 16px;
+    padding: 64px; */
     overflow: hidden;
     position: relative;
+    /* background-image: url(${themeImg});
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom right; */
+`
+
+export const BackgroundContainer = styled.img`
+    width: 100%;
+    height: 100%;
 `
 
 export const MainContainer = styled.div`
