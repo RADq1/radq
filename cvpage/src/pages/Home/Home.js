@@ -9,6 +9,7 @@ import { SkillsAndExperience } from './sections/SkillsAndExperience/SkillsAndExp
 import { ModalContext } from '../../context/ModalProvider'
 import { AboutMeModal } from '../../modals/AboutMeModal/AboutMeModal'
 import { Main } from './sections/Home/Main'
+import { Footer } from './sections/Footer/Footer'
 
 export const Home = () => {
   const { isModal } = useContext(ModalContext);
@@ -23,6 +24,7 @@ export const Home = () => {
         <SkillsAndExperience/>
         <MyProjects/>
         <Contact/>
+        <Footer/>
       </HomeWrapper>
     </>
   )

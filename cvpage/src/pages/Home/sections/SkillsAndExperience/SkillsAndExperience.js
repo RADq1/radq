@@ -1,13 +1,13 @@
 import React from 'react'
 
 import { SkillsAndExperienceWrapper} from './SkillsAndExperience.styles'
-import { LeftSideComp } from './LeftSide/LeftSideComp';
+import { Skills } from './Skills/Skills';
 import { RightSideComp } from './RightSide/RightSideComp';
 
 export const SkillsAndExperience = () => {
   return (
     <SkillsAndExperienceWrapper className="section">
-      <LeftSideComp/>
+      <Skills/>
       <RightSideComp/>
     </SkillsAndExperienceWrapper>
   )

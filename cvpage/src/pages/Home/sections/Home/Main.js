@@ -1,42 +1,19 @@
 import React, { useEffect, useState, useContext } from 'react'
+
 import { AboutMeWrapper, BackgroundContainer, Name, MainTextBox, AboutMeBox, SpecjalizationTextBox, MainContainer, PhotoBox, RightSideContainer, LeftSideContainer, Line, AboutMeText, ImageArrow, ImageArrowText, ImageArrowBox, PhotoContainer, BackgroundImage, TriangleBackground, TextContainer, HiText, TextBox, Surname, Specjalization, SpecjalizationEnding, SpecjalizationBox, NameBox, Photo } from './Main.styles'
-import img from  "../../../../img/CVimage.png"
-import JS from "../../../../img/JS.png";
-import { ModalContext } from '../../../../context/ModalProvider'
-// import Man from "../../../../img/Man"
-import man from "../../../../img/man.png"
 import themeImg from "../../../../img/Theme.png";
+
 export const Main = () => {
 
-  const [isChanged, setIsChanged] = useState(false);
-  const { isModal, setIsModal } = useContext(ModalContext);
-  const [counter, setCounter] = useState(0);
+  const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
 
-  const text1 = "Frontend Developer";
-  const text2 = "Alumnus of Politechnika Bydgoska"
-
-  useEffect(() => {
-    if(counter === 10 || counter > 10) {
-      console.log("end");
-      return;
-    }
-    const timer = setTimeout(() => {
-      setIsChanged(!isChanged);
-      setCounter(counter + 1);
-    }, 4000);
-    
-    return () => {
-      clearTimeout(timer);
-    };
-  }, [isChanged])
-
-  const handleOpenModal = () => {
-    setIsModal(!isModal);
-    console.log("ee")
-  }
+  const handleMouseMove = event => {
+    const { clientX, clientY } = event;
+    setCursorPosition({ x: clientX, y: clientY });
+  };
 
   return (
-    <AboutMeWrapper className="section">
+    <AboutMeWrapper className="section" onMouseMove={handleMouseMove}>
       <BackgroundContainer src={themeImg}/>
       {/* <TriangleBackground/> */}
       {/* <Photo src={man}/> */}

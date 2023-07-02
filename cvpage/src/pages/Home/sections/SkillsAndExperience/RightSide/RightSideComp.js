@@ -1,11 +1,14 @@
 import React from 'react'
 
-import { Title, Line, RightSideWrapper, ContentContainer, ContentBox, Date, Specjalization, SpecjalizationBox, Description} from './RightSideComp.styles'
+import { Line, RightSideWrapper, ContentContainer, ContentBox, Date, Specjalization, SpecjalizationBox, Description} from './RightSideComp.styles'
+import { TitleBox, Title } from '../Skills/Skills.styles'
 
 export const RightSideComp = () => {
   return (
     <RightSideWrapper>
-      <Title>Work Experience</Title>
+        <TitleBox>
+          <Title>EXPERIENCE</Title>
+        </TitleBox>
         <ContentContainer>
           <Line/>
           <ContentBox>

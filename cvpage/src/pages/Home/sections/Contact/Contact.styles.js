@@ -1,8 +1,21 @@
 import { styled } from "styled-components";
 
 export const ContactWrapper = styled.div`
-    /* background-color: rgb(252,218, 105); */
-    background-color: #78aaff;
-    /* background-color: rgb(210,175,255); */
-    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 70vh;
+    padding: 64px;
+    gap: 50px;
+`
+
+export const ContactDescribe = styled.span`
+    max-width: 800px;
+    margin-bottom: 50px;
+    text-align: center;
+`
+
+export const Form = styled.form`
+
 `

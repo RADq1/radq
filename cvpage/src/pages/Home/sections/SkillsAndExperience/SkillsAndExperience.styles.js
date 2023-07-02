@@ -12,11 +12,13 @@ export const SkillsAndExperienceWrapper = styled.div`
     display: flex;
     padding: 64px;
     flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 50px;
+    background-color: #FFE175;
 
-    ${MEDIA_QUERIES.lg} {
-        gap: 0px;
+    ${MEDIA_QUERIES.xxlp} {
+        gap: 200px;
         flex-direction: row;
     }
 `

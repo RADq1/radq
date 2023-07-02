@@ -4,6 +4,21 @@ import { NavigationButton, TopBarWrapper, SlideOutTopBarButton} from './TopBar.s
 
 export const TopBar = () => {
 
+  const [isTop, setIsTop] = useState(true);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      setIsTop(scrollTop === 0);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
     const handleScroll = () => {
@@ -46,7 +61,8 @@ export const TopBar = () => {
   return (
     <div>
         {hidden ? <div><SlideOutTopBarButton onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}/></div> : (
-        <TopBarWrapper>
+        <TopBarWrapper isTop={isTop}>
+        {!isTop && <NavigationButton onClick={() => handleScroll(0)}>Home</NavigationButton>}
         <NavigationButton onClick={() => handleScroll(1)}>About me</NavigationButton>
         <NavigationButton onClick={() => handleScroll(2)}>Skills</NavigationButton>
         <NavigationButton onClick={() => handleScroll(3)}>Projects</NavigationButton>

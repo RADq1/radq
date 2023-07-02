@@ -4,6 +4,8 @@ import { MEDIA_QUERIES } from "../../../../../constants/mediaQueries";
 export const RightSideWrapper = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 `
 
 export const Title = styled.span`
@@ -27,7 +29,7 @@ export const Date = styled.span`
     display: flex;
     width: 120px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 500;
     flex-wrap: wrap;
 `
 
@@ -39,13 +41,13 @@ export const SpecjalizationBox = styled.div`
 
 export const Specjalization = styled.span`
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 500;
 `
 
 export const Description = styled.span`
     font-size: 16px;
     max-width: 200px;
-    font-weight: 300;
+    font-weight: 400;
 
     ${MEDIA_QUERIES.md} {
         max-width: 300px;

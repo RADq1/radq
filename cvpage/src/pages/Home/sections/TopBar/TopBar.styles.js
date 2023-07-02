@@ -4,17 +4,20 @@ import { MEDIA_QUERIES } from "../../../../constants/mediaQueries";
 export const TopBarWrapper = styled.div`
     display: flex;
     justify-content: center;
-    max-height: 2vh;
-    /* position: sticky; */
+    width: 200%;
+    /* min-height: 2vh; */
+    min-height: ${props => (props.isTop ? '2vh' : '4vh')};
+    position: sticky;
     top: ${props => (props.hidden ? '-100px' : '0')};
     position: fixed;
-    background-color: transparent;
+    background-color: ${props => (props.isTop ? 'transparent' : 'rgba(0,0,0,0.9)')};
     z-index: 100;
-    top: 50px;
+    /* top: 50px; */
+    top: ${props => (props.isTop ? '50px' : '27px')};
     left: 68%;
     transform: translate(-50%, -50%);
     display: none;
-    /* opacity: ${props => (props.hidden ? '0' : '1')}; */
+    opacity: ${props => (props.hidden ? '0' : '1')};
     transition: top 0.3s ease;
 
     ${props =>
@@ -46,7 +49,7 @@ export const NavigationButton = styled.div`
     justify-content: center;
     align-items: center;
     min-width: 100px;
-    min-height: 30px;
+    min-height: 40px;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 700;
@@ -61,7 +64,7 @@ export const NavigationButton = styled.div`
         color: black;
     }
 
-    ${MEDIA_QUERIES.xxl} {
+    ${MEDIA_QUERIES.xxlp} {
         min-width: 140px;
         min-height: 50px;
         font-size: 16px;
