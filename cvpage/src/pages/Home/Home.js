@@ -1,6 +1,6 @@
 import { useContext } from 'react'
 
-import { HomeWrapper } from './Home.styles'
+import { BodyStyles, HomeWrapper } from './Home.styles'
 import { AboutMe } from './sections/AboutMe/AboutMe'
 import { Contact } from './sections/Contact/Contact'
 import { TopBar } from './sections/TopBar/TopBar'
@@ -15,17 +15,17 @@ export const Home = () => {
   const { isModal } = useContext(ModalContext);
 
   return (
-    <>
+    <BodyStyles>
       {isModal && <AboutMeModal/>}
       <HomeWrapper>
         <TopBar/>
         <Main/>
         <AboutMe/>
-        <SkillsAndExperience/>
         <MyProjects/>
+        <SkillsAndExperience/>
         <Contact/>
         <Footer/>
       </HomeWrapper>
-    </>
+    </BodyStyles>
   )
 }

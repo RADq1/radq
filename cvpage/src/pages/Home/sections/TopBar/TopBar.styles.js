@@ -5,20 +5,18 @@ export const TopBarWrapper = styled.div`
     display: flex;
     justify-content: center;
     width: 200%;
-    /* min-height: 2vh; */
     min-height: ${props => (props.isTop ? '2vh' : '4vh')};
-    position: sticky;
+    position: fixed;
     top: ${props => (props.hidden ? '-100px' : '0')};
     position: fixed;
     background-color: ${props => (props.isTop ? 'transparent' : 'rgba(0,0,0,0.9)')};
-    z-index: 100;
-    /* top: 50px; */
-    top: ${props => (props.isTop ? '50px' : '27px')};
+    z-index: 101;
+    top: 50px;
+    top: ${props => (props.isTop ? '50px' : '24px')};
     left: 68%;
     transform: translate(-50%, -50%);
     display: none;
     opacity: ${props => (props.hidden ? '0' : '1')};
-    transition: top 0.3s ease;
 
     ${props =>
     props.hidden &&
@@ -26,7 +24,7 @@ export const TopBarWrapper = styled.div`
       top: -50px;
     `}
 
-    ${MEDIA_QUERIES.md} {
+    ${MEDIA_QUERIES.lg} {
         display: flex;
     }
 
@@ -48,13 +46,15 @@ export const NavigationButton = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    min-width: 100px;
+    min-width: 80px;
     min-height: 40px;
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 700;
+    letter-spacing: 2px;
     cursor: pointer;
     margin: 8px;
+    /* padding: 4px 0px; */
     transition: 0.3s;
     border-radius: 30px;
     color: white;
@@ -64,10 +64,19 @@ export const NavigationButton = styled.div`
         color: black;
     }
 
+    ${MEDIA_QUERIES.lg} {
+        min-height: 40px;
+    }
+
+    ${MEDIA_QUERIES.xl} {
+        min-width: 100px;
+    }
+
     ${MEDIA_QUERIES.xxlp} {
         min-width: 140px;
-        min-height: 50px;
         font-size: 16px;
+        margin: 16px;
+        /* padding: 16px; */
     }
 
 `

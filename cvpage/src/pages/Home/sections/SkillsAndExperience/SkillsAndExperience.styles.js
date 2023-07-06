@@ -15,29 +15,33 @@ export const SkillsAndExperienceWrapper = styled.div`
     align-items: center;
     justify-content: center;
     gap: 50px;
-    background-color: #FFE175;
-
+    /* background-color: #FFE175; */
+    background-color: #242424;
     ${MEDIA_QUERIES.xxlp} {
         gap: 200px;
         flex-direction: row;
+        align-items: flex-start;
     }
 `
 
 export const LeftSide = styled.div`
     display: flex;
     flex-direction: column;
-    justify-self: flex-start;
+    align-items: center;
 `
 
 export const LeftTopContainer = styled.div`
     display: flex;
     flex-direction: column;
+    align-items: center;
 `
 
 export const LeftBottomContainer = styled.div`
-    display: flex;
+    /* display: flex; */
+    display: none;
     flex-direction: column;
     gap: 20px;
+    margin-top: 20px;
 `
 
 export const SkillsContainer = styled.div`
@@ -54,6 +58,7 @@ export const DescribeContainer = styled.div`
     flex-direction: column;
     gap: 20px;
     margin: 32px 0;
+    align-items: center;
 `
 
 export const DescribeBox = styled.div`
@@ -96,7 +101,7 @@ export const IconBox = styled.div`
     justify-content: center;
     width: 50px;
     height: 50px;
-    background-color: rgb(0,0,0, 0.9);
+    /* background-color: rgb(0,0,0, 0.9); */
     border-radius: 50%;
 `
 

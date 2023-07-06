@@ -1,12 +1,14 @@
 import React from 'react'
 import { useState } from 'react'
 
-import { AboutMeWrapper, Title, Description, ReadMoreBox, ReadMore, ArrowIcon } from './AboutMe.styles'
-
+import { AboutMeWrapper, Title, DescriptionAboutMe, ReadMoreBox, ReadMore, ArrowIcon } from './AboutMe.styles'
+import { RightSideComp } from './RightSide/RightSideComp'
+import { ContentContainer, Description, Line, ContentBox, Date, Specjalization, SpecjalizationBox } from './RightSide/RightSideComp.styles'
+import { TitleBox } from '../SkillsAndExperience/Skills/Skills.styles'
 export const AboutMe = () => {
 
-  const text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam gravida orci sit amet lacus pharetra, non laoreet nisl tincidunt. Curabitur sapien lorem, fringilla sed suscipit in, pretium non elit. Integer sollicitudin vitae libero non mollis. Donec elit turpis, convallis sed odio laoreet, porta lobortis orci. Maecenas porta lacus metus. Ut non imperdiet tellus, eget eleifend enim. Etiam sodales quam a nisl pharetra, vel convallis tellus dictum. Nulla in est congue, semper turpis viverra, rhoncus quam. Donec bibendum et metus at pretium.Nam eu fermentum diam. Fusce vitae luctus libero. Donec tempor viverra turpis, ac tincidunt odio accumsan sit amet. Pellentesque tincidunt mattis elit, nec blandit arcu aliquet id. Curabitur vitae laoreet lectus. Vivamus ullamcorper, nibh nec suscipit volutpat, nisl risus aliquet odio, posuere hendrerit diam ipsum nec est. Ut nec velit vitae dolor ornare suscipit at eget mauris. Curabitur et euismod velit. Sed ac porttitor libero. Integer congue tincidunt enim, at molestie arcu interdum facilisis. Curabitur ultrices vel mi vel suscipit. Nulla ut nisl ut magna sagittis malesuada in non justo. Aliquam eu arcu eu leo molestie eleifend. Fusce vitae ligula at nibh aliquam iaculis. Aliquam posuere nisl eu dignissim tincidunt. Phasellus vitae ex ac dui aliquet euismod id et nibh."
-
+  const text = "I am Radosław Gackowski, my first hobby has always been computer science and I started my journey with computers when i was 6 years old. First of all i learned how to play games, next when i grew up I started to create some servers in games like Counter-Strike (casual and with modes like Zombie Mod, CoD MoD, BaseBuilder) and Minecraft (Survival, Hunger Games), so i have a little experience with modyfing scripts for these games in C# and Java programming languages. I graduated from Politechnika Bydgoska with Bachelor of Engineering Degree, i studied applied computer science. I've been learning JavaScript, React for at least 1 year. I had finished a graduation project with these technologies and now I'm still learning new libraries for React. "
+  // const text2 = "I am a graduate of Applied Computer Science from Politechnika Bydgoska (Bydgoszcz University of Technology), with a strong passion for computers. During my engineering thesis, I developed an innovative electronic student index application using React and Node.js. This project allowed me to showcase my skills in front-end development andserver-side programming"
   const [isSectionOpen, setIsSectionOpen] = useState(false);
 
   const handleToggleSection = () => {
@@ -16,9 +18,54 @@ export const AboutMe = () => {
   return (
     <AboutMeWrapper className="section" isSectionOpen={isSectionOpen}>
       <Title>ABOUT ME</Title>
-      <Description>{text}</Description>
+      {/* <RightSideComp/> */}
+      <DescriptionAboutMe>{text}</DescriptionAboutMe>
+      {/* <DescriptionAboutMe>{text2}</DescriptionAboutMe> */}
+        <Title>EXPERIENCE</Title>
+        <ContentContainer>
+          <Line/>
+          <ContentBox>
+            <Date>present</Date>
+            <SpecjalizationBox>
+              <Specjalization>Searching for a job</Specjalization>
+              <Description>I am eager to pursue a career as a Frontend Developer.</Description>
+            </SpecjalizationBox>
+          </ContentBox>
+          <Line/>
+          <ContentBox>
+            <Date>2022 - 2023</Date>
+            <SpecjalizationBox>
+              <Specjalization>Storekeeper</Specjalization>
+              <Description>During my studies, I gained experience working as a Storekeeper at keeeper sp. z o.o.</Description>
+            </SpecjalizationBox>
+          </ContentBox>
+          <Line/>
+          <ContentBox>
+            <Date>2021</Date>
+            <SpecjalizationBox>
+              <Specjalization>Manual worker</Specjalization>
+              <Description>I worked as a student manual laborer at Go Packo Sp. zoo during the summer break.</Description>
+            </SpecjalizationBox>
+          </ContentBox>
+          <Line/>
+          <ContentBox>
+            <Date>2018 - 2020</Date>
+            <SpecjalizationBox>
+              <Specjalization>Production worker</Specjalization>
+              <Description>During my academic years, I gained practical experience as a Production Assistant at Kreska printing company.</Description>
+            </SpecjalizationBox>
+          </ContentBox>
+          <Line/>
+          <ContentBox>
+            <Date>2017</Date>
+            <SpecjalizationBox>
+              <Specjalization>Flyer Distributor</Specjalization>
+              <Description>My professional journey began with distributing flyers for SKK Bydgoszcz company.</Description>
+            </SpecjalizationBox>
+          </ContentBox>
+        </ContentContainer>
       <ReadMoreBox onClick={handleToggleSection}>
-        {isSectionOpen ? 
+        {isSectionOpen ?
         <ReadMore>HIDE SECTION</ReadMore> :
         <ReadMore>READ MORE</ReadMore>
         }

@@ -7,6 +7,7 @@ const MEDIA_QUERIES = {
     lg: '@media screen and (min-width: 991px)',
     xl: '@media screen and (min-width: 1200px)',
     xxl: '@media screen and (min-width: 1520px)',
+    xxlt: '@media screen and (min-width: 1620px)',
     xxlp: '@media screen and (min-width: 1920px)',
     xxlpp: '@media screen and (min-width: 2500px)',
   };

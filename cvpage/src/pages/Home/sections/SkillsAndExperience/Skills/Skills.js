@@ -13,37 +13,9 @@ const othersText = "I am adept at working agilely (Agile methodology) using the 
 export const Skills = () => {
   return (
     <LeftSide>
-        <TitleBox>
-          <Title>SKILLS</Title>
-        </TitleBox>
-        {/* <LeftTopContainer>
-          <DescribeContainer>
-            <ColumnTitle>My predispositions</ColumnTitle>
-            <DescribeBox>
-              <LineIcon/>
-              <DescribeText>Mainly Frontend Developer</DescribeText>
-            </DescribeBox>
-            <DescribeBox>
-              <LineIcon/>
-              <DescribeText>Fullstack Developer</DescribeText>
-            </DescribeBox>
-            <DescribeBox>
-              <LineIcon/>
-              <DescribeText>Node.js | Java Developer</DescribeText>
-            </DescribeBox>
-            <ColumnTitle>Languages</ColumnTitle>
-            <DescribeBox>
-              <LineIcon/>
-              <DescribeText>Polish - native</DescribeText>
-            </DescribeBox>
-            <DescribeBox>
-              <LineIcon/>
-              <DescribeText>English - communicative (B2)</DescribeText>
-            </DescribeBox>
-          </DescribeContainer>
-        </LeftTopContainer> */}
-        {/* <LeftBottomContainer>
-        <SkillsSpan>My knowledge in Frontend</SkillsSpan>
+        <Title isWhite={true}>SKILLS</Title>
+        <LeftBottomContainer>
+        <SkillsSpan>Frontend</SkillsSpan>
           <ItemsContainer>
             <ItemBox>
               <IconBox><Image src={js}/></IconBox>
@@ -58,11 +30,11 @@ export const Skills = () => {
               <IconBox><TSIcon/></IconBox>
             </ItemBox>
           </ItemsContainer>
-          <DescribeBox>
+          {/* <DescribeBox>
               <LineIcon/>
               <DescribeSkills>{frontendText}</DescribeSkills>
-          </DescribeBox>
-          <SkillsSpan>My knowledge in Backend</SkillsSpan>
+          </DescribeBox> */}
+          <SkillsSpan>Backend</SkillsSpan>
           <ItemsContainer>
             <ItemBox>
               <IconBox><SpringBackgroundCircle/><SpringIcon/></IconBox>
@@ -77,10 +49,10 @@ export const Skills = () => {
               <IconBox><MySQLIcon/></IconBox>
             </ItemBox>
           </ItemsContainer>
-          <DescribeBox>
+          {/* <DescribeBox>
               <LineIcon/>
               <DescribeSkills>{backendText}</DescribeSkills>
-          </DescribeBox>
+          </DescribeBox> */}
           <SkillsSpan>Others</SkillsSpan>
           <ItemsContainer>
             <ItemBox>
@@ -96,11 +68,11 @@ export const Skills = () => {
               <IconBox><SourceTreeIcon/></IconBox>
             </ItemBox>
           </ItemsContainer>
-          <DescribeBox>
+          {/* <DescribeBox>
               <LineIcon/>
               <DescribeSkills>{othersText}</DescribeSkills>
-          </DescribeBox>
-        </LeftBottomContainer> */}
+          </DescribeBox> */}
+        </LeftBottomContainer>
     </LeftSide>
   )
 }

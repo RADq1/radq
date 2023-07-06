@@ -1,9 +1,11 @@
-import { ComputerWrapper } from "./Computer.styles"
+import { ComputerWrapper, ComputerFrame, Screen } from "./Computer.styles"
 
-export const Computer = () => {
+export const Computer = ( {link} ) => {
     return (
       <ComputerWrapper>
-        TODO Projects in Computer
+        <ComputerFrame>
+          <Screen src={link}/>
+        </ComputerFrame>
       </ComputerWrapper>
     )
   }

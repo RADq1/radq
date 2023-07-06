@@ -5,7 +5,7 @@ export const RightSideWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    /* overflow: hidden; */
 `
 
 export const Title = styled.span`
@@ -16,7 +16,6 @@ export const Title = styled.span`
 export const ContentContainer = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 32px 0;
 `
 
 export const ContentBox = styled.div`
@@ -60,9 +59,9 @@ export const Description = styled.span`
 
 export const Line = styled.div`
     width: 100%;
-    background-color: rgba(0,0,0,0);
+    background-color: rgba(255,255,255,0);
     height: 1px;
-    box-shadow: 1px 1px 1px rgba(0,0,0,0.8);
+    box-shadow: 1px 1px 1px rgba(255,255,255,0.8);
     border-radius: 2px;
 
     ${MEDIA_QUERIES.md} {

@@ -2,17 +2,17 @@ import React from 'react'
 
 import { ContactWrapper, ContactDescribe } from './Contact.styles'
 import { TitleBox, Title } from '../SkillsAndExperience/Skills/Skills.styles'
+import ContactForm from './ContactForm/ContactForm'
 
 
-const contactDescribe = "Nulla in velit a metus rhoncus tempus. Nulla congue nulla vel sem varius finibus. Sed ornare sit amet lorem sed viverra. In vel urna quis libero viverra facilisis ut ac est."
+const contactDescribe = "If you are interested in collaboration or have any questions regarding my work, I would be glad to get in touch. I am open to new challenges and exciting projects."
 export const Contact = () => {
 
   return (
     <ContactWrapper className="section">
-      <TitleBox>
-            <Title>CONTACT</Title>
-      </TitleBox>
+      <Title>CONTACT</Title>
       <ContactDescribe>{contactDescribe}</ContactDescribe>
+      <ContactForm/>
     </ContactWrapper>
   )
 }

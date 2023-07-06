@@ -5,7 +5,6 @@ export const ContactWrapper = styled.div`
     flex-direction: column;
     align-items: center;
     background-color: white;
-    height: 70vh;
     padding: 64px;
     gap: 50px;
 `

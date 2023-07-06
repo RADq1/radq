@@ -7,10 +7,11 @@ export const FooterWrapper = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #4A4848;
+    /* background-color: #4A4848; */
+    background-color: #242424;
     padding: 64px;
     color: white;
-    gap: 30px;
+    gap: 10px;
 `
 
 export const BackToTopBox = styled.div`
@@ -34,8 +35,9 @@ export const ArrowIcon = styled(IoIosArrowUp)`
 
 export const IconsContainer = styled.div`
     display: flex;
-    gap: 20px;
+    gap: 50px;
     align-items: center;
+    margin-bottom: 20px;
 `
 
 export const FacebookIcon = styled(AiOutlineFacebook)`
