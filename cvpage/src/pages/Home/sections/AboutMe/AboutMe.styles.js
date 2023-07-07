@@ -29,7 +29,8 @@ export const AboutMeWrapper = styled.div`
     align-items: center;
     gap: 20px;
     min-height: 200px;
-    background-color: #4A4848;
+    /* background-color: #4A4848; */
+    background-color: #272727;
     color: white;
     padding: 64px;
     position: relative;
@@ -53,7 +54,7 @@ export const AboutMeWrapper = styled.div`
 `
 
 export const Title = styled.span`
-    font-size: 24px;
+    font-size: 28px;
     font-family: Montserrat;
     font-weight: 700;
     letter-spacing: 8px;
@@ -89,7 +90,8 @@ export const ReadMoreBox = styled.div`
     align-items: center;
     justify-content: center;
     width: 100%;
-    background-color: #4A4848;
+    /* background-color: #4A4848; */
+    background-color: #272727;
     gap: 10px;
     position: absolute;
     bottom: 0px;

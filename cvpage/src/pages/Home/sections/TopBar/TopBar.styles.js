@@ -5,7 +5,7 @@ export const TopBarWrapper = styled.div`
     display: flex;
     justify-content: center;
     width: 200%;
-    min-height: ${props => (props.isTop ? '2vh' : '4vh')};
+    min-height: ${props => (props.isTop ? '3vh' : '4vh')};
     position: fixed;
     top: ${props => (props.hidden ? '-100px' : '0')};
     position: fixed;
@@ -47,14 +47,14 @@ export const NavigationButton = styled.div`
     justify-content: center;
     align-items: center;
     min-width: 80px;
-    min-height: 40px;
+    /* min-height: 40px; */
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
     font-weight: 700;
     letter-spacing: 2px;
     cursor: pointer;
-    margin: 8px;
-    /* padding: 4px 0px; */
+    margin: 2px;
+    /* padding: 0px 8px; */
     transition: 0.3s;
     border-radius: 30px;
     color: white;
@@ -65,7 +65,7 @@ export const NavigationButton = styled.div`
     }
 
     ${MEDIA_QUERIES.lg} {
-        min-height: 40px;
+        /* min-height: 40px; */
     }
 
     ${MEDIA_QUERIES.xl} {
@@ -75,7 +75,7 @@ export const NavigationButton = styled.div`
     ${MEDIA_QUERIES.xxlp} {
         min-width: 140px;
         font-size: 16px;
-        margin: 16px;
+        /* margin: 16px; */
         /* padding: 16px; */
     }
 

@@ -9,7 +9,7 @@ export const ComputerWrapper = styled.div`
 
 export const ComputerFrame = styled.div`
   display: none;
-  background-color: darkgray;
+  /* background-color: darkgray; */
   box-shadow: 0px 0px 10px #FF8A00;
   border-radius: 40px;
   overflow: hidden;
